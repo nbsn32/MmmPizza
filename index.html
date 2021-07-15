@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MmmPizza</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+</head>
+<body>
+    <header>
+        <h1>MmmPizza</h1>
+    </header>
+    <main>
+        <div class="content">
+            <div class="content-pizza">
+                <p>Выберите пиццу: </p>
+                <select class="chosen" id="pizza" name="pizza">
+                    <option value="0">Выберите пиццу..</option>
+                    <option value="pepperoni">Пепперони</option>
+                    <option value="rustic">Деревенская</option>
+                    <option value="hawaii">Гавайская</option>
+                    <option value="mushroom">Грибная</option>
+                </select>
+            </div>
+            <div class="content-size">
+                <p>Выберите размер: </p>
+                <select class="chosen" id="size" name="size" disabled>
+                    <option value="0">Выберите размер..</option>
+                    <option value="1">21</option>
+                    <option value="2">26</option>
+                    <option value="3">31</option>
+                    <option value="4">45</option>
+                </select>
+            </div>
+            <div class="content-sauce" >
+                <p>Выберите соус: </p>
+                <select class="chosen" id="sauce" name="sauce" disabled>
+                    <option value="0">Выберите соус..</option>
+                    <option value="cheese">Сырный</option>
+                    <option value="sweet-sour">Кисло-сладкий</option>
+                    <option value="garlic">Чесночный</option>
+                    <option value="bbq">Барбекю</option>
+                </select>
+            </div>
+            <br>
+            <input class="order" type="submit" value="Оформить заказ" />
+        </div>
+        <div id="dialog-confirm" class="modal" title="Чек" >
+            <h2 class="modal-title"><span class="fontawesome-lock"></span>Ваш заказ</h2>
+            <form class="modal-form">
+                <div class="modal-content">
+                    <div class="modal-pizza">
+                        <p class="pizza-title">Пицца:</p>
+                        <p class="pizza-name"></p>
+                    </div>
+
+                    <div class="modal-size">
+                        <p class="size-title">Размер:</p>
+                        <p class="size-name"></p>
+                    </div>
+
+                    <div class="modal-sauce">
+                        <p class="sauce-title">Соус:</p>
+                        <p class="sauce-name"></p>
+                    </div>
+
+                    <div class="modal-price">
+                        <p class="price-title">Цена:</p>
+                        <p class="price-name"></p>
+                    </div>
+                    <div class="modal-thanks">
+                        <p>Спасибо, что выбираете нас!</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        Andrei Petrushin for Amasty
+    </footer>
+    <div class="overlay" id="overlay-modal"></div>
+    <script defer src="script.js"></script>
+</body>
+</html>
